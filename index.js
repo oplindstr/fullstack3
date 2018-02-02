@@ -12,6 +12,7 @@ morgan.token('body', function getId (req) {
 app.use(bodyParser.json())
 app.use(cors())
 app.use(morgan(':method :url :body :status :response-time'))
+app.use(express.static('build'))
 
 let persons = [
     {
